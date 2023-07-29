@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostIndexController;
 use App\Http\Controllers\PostShowController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TagShowController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', PostIndexController::class)->name('home');
 Route::get('/{post}', PostShowController::class)->name('post.show');
+Route::get('/tags/{tag}', TagShowController::class)->name('tags.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

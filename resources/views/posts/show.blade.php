@@ -5,9 +5,7 @@
 
             <div>{{ $post->contents }}</div>
 
-            <div>
-                <strong>{{ $post->author }}</strong> / {{ $post->date->diffForHumans() }}
-            </div>
+            <x-post-meta :post="$post" />
         </div>
     </div>
 
