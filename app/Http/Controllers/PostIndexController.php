@@ -13,7 +13,7 @@ class PostIndexController extends Controller
     public function __invoke(Request $request)
     {
         return view('posts.index', [
-            'posts' => Sheets::collection('posts')->all()->sortByDesc('date')->paginate(10)
+            'posts' => Sheets::collection('posts')->all()->sortByDesc('date')->paginate(3)
         ]);
     }
 }
