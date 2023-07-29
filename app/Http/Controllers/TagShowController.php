@@ -18,6 +18,8 @@ class TagShowController extends Controller
                 return in_array($tag, $post->tags);
             });
 
+        abort_if($posts->isEmpty(), 404);
+
         return view('tags.show', compact('posts', 'tag'));
     }
 }
