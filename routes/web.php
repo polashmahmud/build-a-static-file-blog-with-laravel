@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostCreateController;
 use App\Http\Controllers\PostIndexController;
 use App\Http\Controllers\PostShowController;
+use App\Http\Controllers\PostStoreController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagShowController;
 use Illuminate\Support\Facades\Route;
