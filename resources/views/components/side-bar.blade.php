@@ -52,4 +52,16 @@
             </ul>
         </div>
     </div>
+
+    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="p-6 text-gray-900 dark:text-gray-100">
+            <div class="flex flex-col justify-center items-center space-y-2">
+                <h1 class="font-bold text-xl">Tags</h1>
+                <ul class="flex items-center flex-wrap space-x-3 justify-center">
+                    <li><a class="hover:text-blue-500 transition-colors duration-100" href="{{ route('tags.show', 'laravel') }}">Laravel</a></li>
+                    <li><a class="hover:text-blue-500 transition-colors duration-100" href="{{ route('tags.show', 'vue') }}">Vue</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
