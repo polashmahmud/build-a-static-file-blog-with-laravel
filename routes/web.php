@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', PostIndexController::class)->name('home');
-Route::get('/{post}', PostShowController::class)->name('post.show');
+Route::get('/posts/{post}', PostShowController::class)->name('post.show');
 Route::get('/tags/{tag}', TagShowController::class)->name('tags.show');
 
 Route::middleware('auth')->group(function () {
