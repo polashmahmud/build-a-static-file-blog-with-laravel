@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Sheets\Facades\Sheets;
 
 class PostIndexController extends Controller
 {
@@ -11,6 +12,8 @@ class PostIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('posts.index');
+        return view('posts.index', [
+            'posts' => Sheets::collection('posts')->all()
+        ]);
     }
 }

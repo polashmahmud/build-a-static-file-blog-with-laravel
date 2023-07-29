@@ -14,8 +14,18 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        maxWidth: '100cm'
+                    }
+                }
+            }
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        forms,
+        require('@tailwindcss/typography'),
+    ],
 };
